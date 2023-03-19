@@ -7,9 +7,10 @@ const MovieAPI = () => {
   
   const [movies, setMovies] = useState([]);
   const [searchedMovie, setSearchedMovie] = useState("My little pony");
+  const [newFilter, setNewfilter] = useState("");
 
   let newSearch = searchedMovie;
-  let filter="";
+  let filter= newFilter;
   
   const fetchMovies = async () => {
     try {
@@ -26,20 +27,21 @@ const MovieAPI = () => {
   }, [])
   
   const handleChange = (e) => {
-    setSearchedMovie(e.target.value)
     newSearch = e.target.value;
+    setSearchedMovie(e.target.value)
     fetchMovies();
   }
 
-  const handelSelect = (e) => {
+  const handleSelect = (e) => {
     filter = e.target.value;
     console.log(e.target.value)
+    setNewfilter(filter)
     fetchMovies();
   }
 
   return (
     <main>
-      <Form filter={filter} handelSelect={handelSelect} searchedMovie={searchedMovie} handleChange={handleChange}/>
+      <Form newFilter={newFilter} filter={filter} handleSelect={handleSelect} searchedMovie={searchedMovie} handleChange={handleChange}/>
       {movies.Search && movies.Search.length
       ? <MovieList movies={movies}/>
       : <p>{movies.Error}</p>}

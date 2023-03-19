@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 
 const Movie = ({title, year, type, poster}) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, margin: 5}}>
        <CardMedia
         sx={{ height: 540 }}
         image={poster}
