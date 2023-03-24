@@ -1,30 +1,26 @@
 import * as React from 'react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import TextField from '@mui/material/TextField';
+import { InputLabel, MenuItem, FormControl, Select, TextField } from '@mui/material';
+import { Stack } from '@mui/system';
 
-const Form = ({filter, handleSelect, searchedMovie, handleChange}) => {
+const Form = ({errorMessage, filter, handleSelect, searchedMovie, handleChange}) => {
+
   return (
-    <>
-    <div>
-
+    <Stack direction="row" justifyContent="center">
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <TextField
+              error={errorMessage ? true : false}
               name="input"
               label="Search"
               defaultValue={searchedMovie}
               onChange={handleChange}
+              helperText={errorMessage}
             />
-        </FormControl> 
-        <FormControl sx={{ m: 1, minWidth: 120 }}>
+      </FormControl> 
+      <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="demo-simple-select-label">Filter</InputLabel>
         <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
           value={filter}
-          label="Age"
+          label="Filter"
           onChange={handleSelect}
         >
           <MenuItem value={" "}>All</MenuItem>
@@ -33,8 +29,7 @@ const Form = ({filter, handleSelect, searchedMovie, handleChange}) => {
           <MenuItem value={"Game"}>Game</MenuItem>
         </Select>
       </FormControl>
-      </div>
-    </>
+    </Stack>
   )
 }
 
