@@ -12,16 +12,10 @@ function App() {
       h2: {
         fontFamily: [
           'Bangers',
-          'cursive',
+          'arial',
         ].join(','),
         fontSize: '5rem'
       },
-      h5: {
-        fontFamily: [
-          'Bangers',
-          'cursive',
-        ].join(','),
-      }
     },
     palette: {
       primary: {
