@@ -3,19 +3,6 @@ import { Link, Typography, Box } from '@mui/material';
 
 const Footer = () => {
 
-  function Copyright() {
-    return (
-      <Typography variant="body2" color="text.secondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="#">
-          Pernilla Lumikero
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
-
   return (
       <Box sx={{ bgcolor: 'background.paper', p: 8, pl: 20, pr: 20}} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
@@ -28,10 +15,16 @@ const Footer = () => {
           component="p"
         >
           Assignment to create a dynamic REACT application for the Frontend developer course at JENSEN YH. 
-          Information about movies is fetched with <Link color="inherit" href="https://mui.com/">OMDb API </Link> 
-          and the site is styled with <Link color="inherit" href="https://mui.com/">Material UI</Link>.
+          Information about movies is fetched with 
+          <Link color="inherit" href="https://mui.com/">OMDb API</Link>{' '} 
+          and the site is styled with 
+          <Link color="inherit" href="https://mui.com/">Material UI</Link>.
         </Typography>
-        <Copyright />
+        <Typography variant="body2" color="text.secondary" align="center">
+        {'Copyright © '}
+        <Link color="inherit" href="#"> Pernilla Lumikero</Link>{' '} 
+        2023
+      </Typography>
       </Box>
 
   )

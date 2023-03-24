@@ -23,8 +23,9 @@ const Header = () => {
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               Welcome to the Movie Database! Here you can search for your favorite movies, 
-              series and games with the help of the <Link color="inherit" href="https://www.omdbapi.com/">
-              OMDb API</Link>. Enjoy!
+              series and games with the help of the 
+              <Link color="inherit" href="https://www.omdbapi.com/">OMDb API</Link>. 
+              Enjoy!
             </Typography>
           </Container>
         </Box>
