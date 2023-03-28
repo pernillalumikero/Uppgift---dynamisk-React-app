@@ -15,9 +15,9 @@ const Footer = () => {
           component="p"
         >
           Assignment to create a dynamic REACT application for the Frontend developer course at JENSEN YH. 
-          Information about movies is fetched with 
+          Information about movies is fetched with {' '} 
           <Link color="inherit" href="https://mui.com/">OMDb API</Link>{' '} 
-          and the site is styled with 
+          and the site is styled with {' '} 
           <Link color="inherit" href="https://mui.com/">Material UI</Link>.
         </Typography>
         <Typography variant="body2" color="text.secondary" align="center">
